@@ -30,7 +30,7 @@ DIALOGUE.plot<-function(R,results.dir = "~/Desktop/DIALOGUE.results/",
   
   pdf(paste0(results.dir,"/",R$name,".pdf"))
   DIALOGUE.plot.av(R,mark.samples = mark.samples,metadata = metadata,d = d,MCPs = MCPs)
-#   DIALOGUE.plot.sig.comp(R)
+  DIALOGUE.plot.sig.comp(R)
   if(!is.null(pheno)){
     DIALOGUE.violin.pheno(R,pheno = pheno,MCPs = MCPs,d = d)
   }
