@@ -486,12 +486,15 @@ DIALOGUE3<-function(rA,main,results.dir = "~/Desktop/DIALOGUE.results/",full.ver
   R$MCPs.full<-sig2MCP(R$sig1)
   R$MCPs<-sig2MCP(R$sig2)
   
+  print('489')
   R$cca.fit<-laply(R$cell.types,function(x) diag(cor(R$cca.scores[[x]],R$scores[[x]][,1:R$k["DIALOGUE"]])))
+  print('490')
   rownames(R$cca.fit)<-R$cell.types
   
   fileName<-paste0(results.dir,"DLG.full.output_",main,".rds")
   # if(full.version){saveRDS(R,file = fileName)}
   
+  print('495')
   if(!is.null(pheno)){R$phenoZ<-DIALOGUE.pheno(R,pheno = pheno)}
   if(full.version){saveRDS(R,file = fileName)}
   
