@@ -29,12 +29,9 @@ DIALOGUE.plot<-function(R,results.dir = "~/Desktop/DIALOGUE.results/",
                         pheno = NULL,mark.samples = NULL,metadata = NULL,d = 1, MCPs = 1:R$k["DIALOGUE"]){
   
   pdf(paste0(results.dir,"/",R$name,".pdf"))
-  print('line 32')
   DIALOGUE.plot.av(R,mark.samples = mark.samples,metadata = metadata,d = d,MCPs = MCPs)
-  print('line 33')
-  DIALOGUE.plot.sig.comp(R)
+#   DIALOGUE.plot.sig.comp(R)
   if(!is.null(pheno)){
-    print('line 35')
     DIALOGUE.violin.pheno(R,pheno = pheno,MCPs = MCPs,d = d)
   }
   dev.off();par(font.axis = 2);par(font.lab = 2);par(font = 2)
