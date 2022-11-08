@@ -46,6 +46,7 @@ DIALOGUE.run<-function(rA,main,k = 3,results.dir = getwd(),plot.flag = T,pheno =
   R<-DIALOGUE3(rA = rA,main = main,results.dir = results.dir,full.version = full.version,pheno = pheno)
   if(plot.flag){
     DIALOGUE.plot(R,results.dir = results.dir,pheno = pheno)
+    print('dialogue.plot done')
   }
   return(R)
 }
