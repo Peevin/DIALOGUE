@@ -795,7 +795,7 @@ sig2MCP<-function(R.sig,k = 5){
     }
     return(sig1)
   })
-  print(MCPs)
+
   names(MCPs)<-paste0("MCP",1:k)
   print('finish sig2MCP')
   return(MCPs)
