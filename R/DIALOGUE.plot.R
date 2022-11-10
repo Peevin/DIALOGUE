@@ -96,7 +96,9 @@ DIALOGUE.plot.sig.comp<-function(R,main = ""){
   }
   m1<-t(laply(R$MCPs,f))
   m2<-t(laply(R$MCPs,function(x) f(x,-1)))
-
+  print(head(m1))
+  print(dim(m1))
+  print(names(R$MCPs))
   colnames(m1)<-paste0(names(R$MCPs),".up")
   colnames(m2)<-paste0(names(R$MCPs),".down")
   m<-cbind(m1,m2)
